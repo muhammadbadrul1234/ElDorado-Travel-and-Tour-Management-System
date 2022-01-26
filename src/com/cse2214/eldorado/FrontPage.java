@@ -10,6 +10,8 @@ public class FrontPage
     {
         System.out.print("\033[H\033[2J");
 
+        int menu;
+
         LogoAndUI showlogo = new LogoAndUI();
         showlogo.logo();
 
@@ -26,7 +28,8 @@ public class FrontPage
         System.out.println("\t\t\t\t\t\t|               6. ADMINISTRATION                    |");
         System.out.println("\t\t\t\t\t\t|               7. Exit                              |");
         System.out.println("\t\t\t\t\t\t******************************************************");
-        System.out.println("\t\t\t\t\t\t\t Enter Your choice: ");
+        System.out.print("\n\t\t\t\t\t\t\t Enter Your choice: ");
+        
         
 
  
