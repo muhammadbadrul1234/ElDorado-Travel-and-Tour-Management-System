@@ -18,6 +18,16 @@ public class FrontPage
         Menus front = new Menus();
         front.menuOfFrontMenu();
 
+        switch (menu)
+        {
+            case 1:
+                
+                break;
+        
+            default:
+                break;
+        }
+
         
 
         
