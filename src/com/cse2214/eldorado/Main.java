@@ -14,11 +14,11 @@ public class Main
         //new MongoDB().mongoDB();
         //System.console().writer().println("cls");
         System.out.print("\033[H\033[2J");
-        MongoDB mdb= new MongoDB();
+        //MongoDB mdb= new MongoDB();
 
 
  
-        mdb.mongoDB();
+        //mdb.mongoDB();
 
 
 
@@ -41,7 +41,7 @@ public class Main
 
 
 
-        /*LogoAndUI logo = new LogoAndUI();
+        LogoAndUI logo = new LogoAndUI();
         logo.Logo();
         LogoAndUI welcome = new LogoAndUI();
         welcome.Welcome();
@@ -54,7 +54,7 @@ public class Main
         System.out.println("\n\n\t\t\t\t\t\t\t***************************************");
         System.out.println("\n\t\t\t\t\t\t\t|        1. ADMINISTRATION LOGIN      |");
         System.out.println("\n\t\t\t\t\t\t\t|        2. EMPLOYEE LOGIN            |");
-        System.out.println("\n\t\t\t\t\t\t\t|        3. ABOUT US                  |");*/
+        System.out.println("\n\t\t\t\t\t\t\t|        3. ABOUT US                  |");
 
     }
 }
