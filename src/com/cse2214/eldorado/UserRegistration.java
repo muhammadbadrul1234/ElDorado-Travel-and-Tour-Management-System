@@ -12,7 +12,7 @@ public class UserRegistration{
     {
 
      LogoAndUI logo = new LogoAndUI();
-     logo.Logo();
+     logo.logo();
        
       
 
