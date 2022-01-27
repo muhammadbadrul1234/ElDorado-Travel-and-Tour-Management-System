@@ -11,6 +11,7 @@ public class Menus
         System.out.println("\t\t\t\t\t\t******************************************************");
         System.out.println("\t\t\t\t\t\t|               1. Login/Signup                      |");
         System.out.println("\t\t\t\t\t\t|               2. Emergency Helplines               |");
+        System.out.println("\t\t\t\t\t\t|               3. Get Free Reward                   |");
         System.out.println("\t\t\t\t\t\t|               3. ADMINISTRATION                    |");
         System.out.println("\t\t\t\t\t\t|               4. About Developers                  |");
         System.out.println("\t\t\t\t\t\t|               5. Exit                              |");
