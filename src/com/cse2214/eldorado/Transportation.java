@@ -205,7 +205,7 @@ public class Transportation
                     //database read;
 
                     System.out.println("\n\t\t\t\t_________________________________________________________________________________________");
-                    System.out.println("\n\t\t\t\t                       The amount You need to pay is: "+Btotalprice+"TK");
+                   // System.out.println("\n\t\t\t\t                       The amount You need to pay is: "+Btotalprice+"TK");
                     System.out.println("\n\t\t\t\t_________________________________________________________________________________________");
                     System.out.println("\n\t\t\t\t|                             Order Taken Successfully                                  |");
                     System.out.println("\n\t\t\t\t|                        Go to Reciept Menu and Pay The Bill                            |");                         
@@ -230,7 +230,7 @@ public class Transportation
                     //database read;
 
                     System.out.println("\n\t\t\t\t_________________________________________________________________________________________");
-                    System.out.println("\n\t\t\t\t                       The amount You need to pay is: "+Etotalprice+"TK");
+                   // System.out.println("\n\t\t\t\t                       The amount You need to pay is: "+Etotalprice+"TK");
                     System.out.println("\n\t\t\t\t_________________________________________________________________________________________");
                     System.out.println("\n\t\t\t\t|                             Order Taken Successfully                                  |");
                     System.out.println("\n\t\t\t\t|                        Go to Reciept Menu and Pay The Bill                            |");                         
