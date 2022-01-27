@@ -1,5 +1,13 @@
 package com.cse2214.eldorado;
 
+<<<<<<< HEAD
+public class FrontPage {
+     
+    
+           
+
+
+=======
 //Contribution
 //Badrul
 //2012020216
@@ -45,4 +53,5 @@ public class FrontPage
     
     }
     
+>>>>>>> c468eed788102721c5347ad7bce7072230eff57c
 }
