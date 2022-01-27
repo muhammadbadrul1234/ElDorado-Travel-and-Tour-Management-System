@@ -10,7 +10,7 @@ public class Domestic {
         LogoAndUI showlogo = new LogoAndUI();
         showlogo.logo();
         
-        String currentlocation,destination, transportationtype;  
+        String currentlocation; 
 
 
         System.out.println("\n\n\t\t\t\t\t\t==========================================================");
@@ -26,12 +26,9 @@ public class Domestic {
         System.out.print("\t\t\t\t\t\tEnter Your Current Location: ");
         currentlocation = scan.nextLine();
 
-        System.out.print("\t\t\t\t\t\tEnter Your Destination: ");
-        destination = scan.nextLine();
+        
 
-        System.out.print("\t\t\t\t\t\tEnter Your Transportayiontype: 1.Bus  2.Train. 3.Domestic flight");
-        transportationtype = scan.nextLine();
-
+        
 
         
 
