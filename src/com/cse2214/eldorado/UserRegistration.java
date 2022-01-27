@@ -113,6 +113,11 @@ public class UserRegistration{
     System.out.println("\t\t\t\t\t\tCountry: "+Country);
     System.out.println("\t\t\t\t\t\tUser Name: "+UserName);
     System.out.println("\t\t\t\t\t\tUser Password: "+Password);
+
+
+
+
+    new MongoDB().insertMongoDB(Integer.parseInt(UserNumber),Name,gender,PassportNumber,PhoneNumber,Email,CardNumber,UserNumber,City,Country,UserName,Password);
         
 
     }

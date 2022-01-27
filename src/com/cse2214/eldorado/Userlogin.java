@@ -10,7 +10,7 @@ public class Userlogin
 
     void login()
     {
-        System.out.print("\033[H\033[2J");
+        System.out.print("\033[H\033[2J"); //clear terminnal
 
         int menuSel;
 
@@ -33,7 +33,6 @@ public class Userlogin
                 Userlogin userlogin= new Userlogin();
                 userlogin.login1();     
             
-                
                 break;
             }
 
@@ -100,6 +99,38 @@ public class Userlogin
 
         LogoAndUI showlogo = new LogoAndUI();
         showlogo.logo();
+
+
+        String UserNumber,Name;
+        System.out.println("\n\n\t\t\t\t\t\t==========================================================");
+        System.out.println("\n\t\t\t\t\t\t|                 ADMINISTRATION PORTAL                  |");
+        System.out.println("\n\t\t\t\t\t\t|                   New User Sign-up                    |");
+        System.out.println("\n\t\t\t\t\t\t==========================================================");
+        System.out.println("\n\t\t\t\t\t\t**********************************************************");
+        System.out.println("\n\t\t\t\t\t\t|        Please Provide the Recquired Information        |");
+        System.out.println("\n\t\t\t\t\t\t**********************************************************");
+
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.print("\t\t\t\t\t\tEnter The User number  : ");
+        UserNumber = scan.nextLine();
+
+        System.out.print("\t\t\t\t\t\tPassword      : ");
+        Name = scan.nextLine();
+
+        if(new MongoDB().passwordAuth(UserNumber, Name))
+        {
+            System.out.print("\t\t\t\t\t\tTakrim IS Hijra..........****");
+
+        }
+        else
+        {
+            System.out.print("\t\t\t\t\t\tTakrim IS 100% Hijra..........****");
+
+        }
+
+
+
 
 
     }

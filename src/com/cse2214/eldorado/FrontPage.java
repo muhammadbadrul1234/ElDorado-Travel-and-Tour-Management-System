@@ -31,9 +31,15 @@ public class FrontPage
                 loginuser.login(); 
                 break;
             }
+            case 2:
+            {
+                UserRegistration regi = new UserRegistration();
+                regi.registration();
+            }
 
             case 5:
             {
+                new MongoDB().mongoDBBus();
                 break;
             }
 
