@@ -10,6 +10,9 @@ public class UserRegistration{
     
    void registration()
     {
+
+     LogoAndUI logo = new LogoAndUI();
+     logo.Logo();
        
       
 
