@@ -7,9 +7,9 @@ public class Domestic {
 
     void domestic()
     {
-        LogoAndUI logo = new LogoAndUI();
-        logo.Logo();
-
+        LogoAndUI showlogo = new LogoAndUI();
+        showlogo.logo();
+        
         String currentlocation,destination, transportationtype;  
 
 

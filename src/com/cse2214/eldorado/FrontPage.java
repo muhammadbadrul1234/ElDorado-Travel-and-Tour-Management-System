@@ -4,6 +4,8 @@ package com.cse2214.eldorado;
 //Badrul
 //2012020216
 
+import java.util.Scanner;
+
 public class FrontPage
 {
     void frontPage()
@@ -17,6 +19,22 @@ public class FrontPage
 
         Menus front = new Menus();
         front.menuOfFrontMenu();
+
+        Scanner scan = new Scanner(System.in);
+        menu = scan.nextInt();
+
+        switch (menu)
+        {
+            case 1:
+            {
+                Userlogin loginuser= new Userlogin();
+                loginuser.login(); 
+                break;
+            }
+
+            default:
+                break;
+        }
 
         
 
