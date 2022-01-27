@@ -7,7 +7,7 @@ public class Transportation
     {
 
         LogoAndUI logo = new LogoAndUI();
-        logo.Logo();
+        logo.logo();
 
         System.out.println("\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*******************************************************************");
         System.out.println("** BUS RESERVATION AND TICKETING SYSTEM   **");
