@@ -15,7 +15,20 @@ public class Menus
         System.out.println("\t\t\t\t\t\t|               4. About Developers                  |");
         System.out.println("\t\t\t\t\t\t|               5. Exit                              |");
         System.out.println("\t\t\t\t\t\t******************************************************");
-        System.out.print("\n\t\t\t\t\t\t\t Enter Your choice: ");
+        System.out.print("\t\t\t\t\t\t\t Enter Your choice: ");
+    }
+
+    void loginSignup()
+    {
+        System.out.println("\t\t\t\t\t\t======================================================");
+        System.out.println("\t\t\t\t\t\t|         Please Select from the option Below        |");
+        System.out.println("\t\t\t\t\t\t******************************************************");
+        System.out.println("\t\t\t\t\t\t|               1. Login                             |");
+        System.out.println("\t\t\t\t\t\t|               2. New User Registraion              |");
+        System.out.println("\t\t\t\t\t\t|               3. Forgot Credentials                |");
+        System.out.println("\t\t\t\t\t\t|               4. Return To Homepage                |");
+        System.out.println("\t\t\t\t\t\t******************************************************");
+        System.out.print("\t\t\t\t\t\t\t Enter Your choice: ");
     }
 
 }

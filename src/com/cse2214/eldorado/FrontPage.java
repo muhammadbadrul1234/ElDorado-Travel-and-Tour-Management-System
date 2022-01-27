@@ -32,17 +32,19 @@ public class FrontPage
                 break;
             }
 
-            default:
+            case 5:
+            {
                 break;
+            }
+
+            default:
+            {
+
+    
+                break;
+
+            }
+            
         }
-
-        
-
-        
-
- 
-
-    
     }
-    
 }

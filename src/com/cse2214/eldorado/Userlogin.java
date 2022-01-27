@@ -1,48 +1,104 @@
 package com.cse2214.eldorado;
 //Takrim
 
+import java.util.Scanner;
+
 public class Userlogin {
 
     void login()
     {
         System.out.print("\033[H\033[2J");
 
+        int menuSel;
+
         LogoAndUI showlogo = new LogoAndUI();
         showlogo.logo();
        
         String UserName, Password;
 
-        System.out.println("\t\t\t\t\t\t======================================================");
-        System.out.println("\t\t\t\t\t\t|         Please Select from the option Below        |");
-        System.out.println("\t\t\t\t\t\t******************************************************");
-        System.out.println("\t\t\t\t\t\t|               1. Login                             |");
-        System.out.println("\t\t\t\t\t\t|               2. New User Registraion              |");
-        System.out.println("\t\t\t\t\t\t|               3. Forgot Credentials                |");
-        System.out.println("\t\t\t\t\t\t|               4. Return To Homepage                |");
-        System.out.println("\t\t\t\t\t\t******************************************************");
-        System.out.println("\n\t\t\t\t\t\t\t USERNAME :\t");
+        Menus menu = new Menus();
+        menu.loginSignup();
+
+        Scanner scan = new Scanner(System.in);
+        menuSel = scan.nextInt();
+
+        switch (menuSel) 
+        {
+            case 1: 
+            {
+
+                Userlogin userlogin= new Userlogin();
+                userlogin.login1();     
+            
+                
+                break;
+            }
+
+            case 2: 
+            {  
+                Userlogin userlogin= new Userlogin();
+                userlogin.login1();                                  
+                
+                break;
+            }
+
+            case 3: 
+            {  
+                Userlogin userlogin= new Userlogin();
+                userlogin.login1();                                  
+                
+                break;
+            }
+
+            case 4: 
+            {
+                LogoAndUI showloading = new LogoAndUI();
+                showloading.loadingBar(); 
+
+                Userlogin userlogin= new Userlogin();
+                userlogin.login1();                                  
+                
+                break;
+            }
+
         
-    
+            default:
+            {
+                try 
+                {
+                    for(int i=0;i<10;i++)
+                    {
+                        Thread.sleep(50);
+                    }
+                    //System.out.println("\t\t\t\t\t\t\t !!!!Wrong Input!!!!");
+                } 
+                catch (Exception e)
+                {
+            
+                }
 
 
+               // System.out.print("\033[H\033[2J");
 
+                Userlogin wronglogin= new Userlogin();
+                wronglogin.login();
+                System.out.println("\t\t\t\t\t\t\t !!!!Wrong Input!!!!");
+                //break;
+            }
+            
+        }
+    }
 
+    void login1()
+    {
+        System.out.print("\033[H\033[2J");
+
+        //int menuSel;
+
+        LogoAndUI showlogo = new LogoAndUI();
+        showlogo.logo();
 
 
     }
-
-     
-
-        
-    
-
-
-
-
-
-
-    
-
-
     
 }

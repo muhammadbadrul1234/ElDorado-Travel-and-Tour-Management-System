@@ -92,6 +92,8 @@ public class LogoAndUI
             e.printStackTrace();
         }
 
+
+
     }
 
     void loading()
@@ -127,11 +129,45 @@ public class LogoAndUI
         {
             
         }
+    }
+
+    void loadingBar()
+    {
+        System.out.println("\t\t\t\t\t\t      ");
+
+        char x=16;
+
+        try 
+        {
+            for(int i=0;i<50;i++)
+            {
+                
+                System.out.print(ANSI_WHITE_BACKGROUND +ANSI_PURPLE + x  + ANSI_RESET);
+
+                if(i<10)
+                {
+                    Thread.sleep(150);
+                }
+                if(i>=10 && i<20)
+                {
+                    Thread.sleep(20);
+                }
+                if(i>=10)
+                {
+                    Thread.sleep(20);
+                }
+            }
+        } 
+        catch (Exception e)
+        {
+            
+        }
 
         
 
-        }
     }
+}
+
 
 
 
