@@ -184,7 +184,6 @@ public class UserInterface{
         System.out.println(ANSI_RED + "\t\t\t\t\t\t|              For Fast Resposne call 911            |" + ANSI_RESET);
         System.out.println(ANSI_RED + "\t\t\t\t\t\t******************************************************" + ANSI_RESET);
     }
-    
     void availableBus(String destination) {
         System.out.println("\t\t\t\t\t\t======================================================");
         System.out.println("\t\t\t\t\t\t|                    Available Bus                   |");
