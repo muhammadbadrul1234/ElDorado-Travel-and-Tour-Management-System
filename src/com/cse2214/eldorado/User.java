@@ -1,17 +1,100 @@
 package com.cse2214.eldorado;
-
-//Takrim
-
+//Takrim-2012020205
 import java.util.Scanner;
 
-public class UserRegistration{
+public class User {
 
 
-    
-   void registration()
+
+    void login() {
+        System.out.print("\033[H\033[2J"); // clear terminnal
+        int UserInterfaceel;
+        UserInterface showlogo = new UserInterface();
+        showlogo.logo();
+        String UserName, Password;
+        UserInterface menu = new UserInterface();
+        menu.loginSignup();
+        Scanner scan = new Scanner(System.in);
+        UserInterfaceel = scan.nextInt();
+        switch (UserInterfaceel) {
+            case 1:
+                login1();
+                break;
+            case 2: {
+                User user = new User();
+                user.login1();
+                break;
+            }
+            case 3: {
+                forgetLogin1();
+                break;
+            }
+            case 4: {
+                UserInterface showloading = new UserInterface();
+                showloading.loadingBar();
+                User user = new User();
+                user.login1();
+                break;
+            }
+            default: {
+                try {
+                    for (int i = 0; i < 10; i++) {
+                        Thread.sleep(50);
+                    }
+                    // System.out.println("\t\t\t\t\t\t\t !!!!Wrong Input!!!!");
+                } catch (Exception e) {
+
+                }
+
+                // System.out.print("\033[H\033[2J");
+
+                User wronglogin = new User();
+                wronglogin.login();
+                System.out.println("\t\t\t\t\t\t\t !!!!Wrong Input!!!!");
+                // break;
+            }
+
+        }
+    }
+
+    static void login1() {
+        System.out.print("\033[H\033[2J");
+        UserInterface showlogo = new UserInterface();
+        showlogo.logo();
+        String UserNumber, Name;
+        UserInterface menu1 = new UserInterface();
+        menu1.userLogin();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("\n\t\t\t\t\t\t  Email    : ");
+        UserNumber = scan.nextLine();
+        System.out.print("\t\t\t\t\t\t  Password : ");
+        Name = scan.nextLine();
+        UserInterface showloading1 = new UserInterface();
+        showloading1.loadingBar();
+        if (new MongoDB().passwordAuth(UserNumber, Name)) {
+            System.out.print("\033[H\033[2J");
+            UserInterface showlogo1 = new UserInterface();
+            showlogo1.logo();
+            UserInterface menu2 = new UserInterface();
+            menu2.userLoginSuccessfull();
+            UserInterface showloading2 = new UserInterface();
+            showloading2.loadingBar();
+
+        } 
+        else{
+            System.out.print("\033[H\033[2J");
+            UserInterface showlogo1 = new UserInterface();
+            showlogo1.logo();
+            UserInterface menu3 = new UserInterface();
+            menu3.userLoginUnSuccessfull();
+            UserInterface showloading2 = new UserInterface();
+            showloading2.loadingBar();
+        }
+    }
+    void registration()
     {
 
-     LogoAndUI logo = new LogoAndUI();
+     UserInterface logo = new UserInterface();
      logo.logo();
        
       
@@ -123,4 +206,12 @@ public class UserRegistration{
     }
 
     
+
+    
+    void forgetLogin1()
+    {
+
+    }
+
+
 }

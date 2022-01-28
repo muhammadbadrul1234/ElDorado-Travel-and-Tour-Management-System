@@ -8,8 +8,6 @@ import java.util.Formatter;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
-//import java.lang.System.Logger;
-
 public class MongoDB {
     MongoClient client;
     MongoDatabase db;
@@ -17,7 +15,6 @@ public class MongoDB {
     MongoCollection<Document> collectionbus;
     MongoCollection<Document> collectionedb;
     FindIterable<Document> iterdoc, iterdocbus, iterdocedb;
-
     public MongoDB() {
         //Logger.getLogger
         Logger.getLogger("org.mongodb.driver").setLevel(Level.OFF);
@@ -31,17 +28,24 @@ public class MongoDB {
         iterdocbus = collectionbus.find();
         iterdocedb = collectionedb.find();
     }
-
     void mongoDB() {
         for (Document doc : iterdoc)
             System.out.println(doc.get("User Number") + "\t|\t" + doc.get("Name"));
     }
-
     void mongoDBBus() {
         for (Document doc : iterdocbus)
             System.out.println(doc.get("From_City") + "\t|\t" + doc.get("Fare"));
     }
-
+    void mongoDBBusFinder(String To_City) {
+        for(Document doc : iterdocbus){
+            if (doc.get("To_City").equals(To_City)){
+                System.out.print("\n\t\t\t\t|");
+                System.out.format("%15s%15s%15s%4s", doc.get("To_City") + "\t|\t", doc.get("Bus_Name") + "\t|\t",doc.get("Departure_time")+ "\t|\t" , doc.get("Fare") + "\t|");
+                int Fare=1;//doc.get("Fare");
+                new Transportation().fareGenerator(Fare);
+            }
+        }
+    }
     void insertMongoDB(int User_Number, String... args) {
         Document doc = new Document("User Number", User_Number)
                 .append("Name", args[0])
@@ -57,7 +61,6 @@ public class MongoDB {
                 .append("Passeord", args[10]); // 0-10
         collection.insertOne(doc);
     }
-
     void updateMongoDB(String Email, String password) {
         Document doc = collection.find(Filters.eq("Email", Email)).first();
         if (doc == null){
@@ -67,7 +70,6 @@ public class MongoDB {
         doc.replace("Passeword", password);
         collection.updateOne(Filters.eq("Email",Email),new Document("$set",doc));
     }
-
     public boolean passwordAuth(String Email, String password) {
         Document doc = collection.find(Filters.eq("Email", Email)).first();
         if (doc == null)
@@ -76,12 +78,21 @@ public class MongoDB {
             return true;
         return false;
     }
-
     void mongoDBEmergencyDB() {
         for (Document doc : iterdocedb) {
-            System.out.print("\t|");
-            System.out.format("%-30s%20s%20s", doc.get("Country") + "\t|\t", doc.get("Category") + "\t|\t",
+            System.out.print("\t\t\t   |");
+            System.out.format("%25s%20s%20s", doc.get("Country") + "\t|\t", doc.get("Category") + "\t|\t",
                     doc.get("Mobile") + "\t|\n");
         }
     }
+    void mongoDBEmergencyDBFiler(String Country) {
+        for (Document doc : iterdocedb){
+            if (doc.get("Country").equals(Country)){
+                System.out.print("\t\t\t   |");
+                System.out.format("%25s%20s%20s", doc.get("Country") + "\t|\t", doc.get("Category") + "\t|\t",doc.get("Mobile") + "\t|\n");
+            }
+        }
+    }
+
 }
+
