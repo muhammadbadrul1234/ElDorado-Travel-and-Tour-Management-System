@@ -133,30 +133,35 @@ public class LogoAndUI
 
     void loadingBar()
     {
-        System.out.println("\t\t\t\t\t\t      ");
+        System.out.print("\n\t\t\t\t\t\t      ");
 
         char x=16;
+
+        //LogoAndUI showloading = new LogoAndUI();
+        //showloading.loading();
 
         try 
         {
             for(int i=0;i<50;i++)
             {
                 
-                System.out.print(ANSI_WHITE_BACKGROUND +ANSI_PURPLE + x  + ANSI_RESET);
+                System.out.print(x);
 
                 if(i<10)
                 {
-                    Thread.sleep(150);
+                    Thread.sleep(10);
                 }
                 if(i>=10 && i<20)
                 {
-                    Thread.sleep(20);
+                    Thread.sleep(5);
                 }
                 if(i>=10)
                 {
-                    Thread.sleep(20);
+                    Thread.sleep(1);
                 }
             }
+            System.out.print("\n");
+
         } 
         catch (Exception e)
         {

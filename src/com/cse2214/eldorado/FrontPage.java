@@ -37,9 +37,9 @@ public class FrontPage
                 regi.registration();
             }
 
-            case 5:
+            case 6://Feature implementation
             {
-                new MongoDB().mongoDBBus();
+                new MongoDB().mongoDBEmergencyDB();
                 break;
             }
 
