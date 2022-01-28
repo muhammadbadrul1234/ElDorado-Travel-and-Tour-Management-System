@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 public class Userlogin 
 {
-
     void login()
     {
         System.out.print("\033[H\033[2J"); //clear terminnal
@@ -100,33 +99,48 @@ public class Userlogin
         LogoAndUI showlogo = new LogoAndUI();
         showlogo.logo();
 
-
         String UserNumber,Name;
-        System.out.println("\n\n\t\t\t\t\t\t==========================================================");
-        System.out.println("\n\t\t\t\t\t\t|                 ADMINISTRATION PORTAL                  |");
-        System.out.println("\n\t\t\t\t\t\t|                   New User Sign-up                    |");
-        System.out.println("\n\t\t\t\t\t\t==========================================================");
-        System.out.println("\n\t\t\t\t\t\t**********************************************************");
-        System.out.println("\n\t\t\t\t\t\t|        Please Provide the Recquired Information        |");
-        System.out.println("\n\t\t\t\t\t\t**********************************************************");
 
+        Menus menu1 = new Menus();
+        menu1.userLogin();
         
         Scanner scan = new Scanner(System.in);
-        System.out.print("\t\t\t\t\t\tEnter The User number  : ");
+        System.out.print("\n\t\t\t\t\t\t  Email    : ");
         UserNumber = scan.nextLine();
 
-        System.out.print("\t\t\t\t\t\tPassword      : ");
+        System.out.print("\t\t\t\t\t\t  Password : ");
         Name = scan.nextLine();
+
+        LogoAndUI showloading1 = new LogoAndUI();
+        showloading1.loadingBar();
 
         if(new MongoDB().passwordAuth(UserNumber, Name))
         {
-            System.out.print("\t\t\t\t\t\tTakrim IS Hijra..........****");
+            System.out.print("\033[H\033[2J");
+
+    
+            LogoAndUI showlogo1 = new LogoAndUI();
+            showlogo1.logo();
+
+            Menus menu2 = new Menus();
+            menu2.userLoginSuccessfull();
+
+            LogoAndUI showloading2 = new LogoAndUI();
+            showloading2.loadingBar();
 
         }
         else
         {
-            System.out.print("\t\t\t\t\t\tTakrim IS 100% Hijra..........****");
+            System.out.print("\033[H\033[2J");
 
+            LogoAndUI showlogo1 = new LogoAndUI();
+            showlogo1.logo();
+
+            Menus menu3 = new Menus();
+            menu3.userLoginUnSuccessfull();
+
+            LogoAndUI showloading2 = new LogoAndUI();
+            showloading2.loadingBar();
         }
 
 
