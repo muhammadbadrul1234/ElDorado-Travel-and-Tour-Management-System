@@ -1,6 +1,12 @@
 package com.cse2214.eldorado;
+//Contribution-Badrul-2012020216
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import javax.print.attribute.standard.Destination;
+import java.lang.Thread;
 
-public class Menus {
+public class UserInterface{
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -10,7 +16,7 @@ public class Menus {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
-
+    
     public static final String ANSI_BLACK_BACKGROUND = "\u001B[40m";
     public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
     public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
@@ -19,7 +25,90 @@ public class Menus {
     public static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
     public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
-
+    void logo(){
+        try{
+            File logo = new File("Logo.txt");
+            Scanner readLogo = new Scanner(logo);
+            while (readLogo.hasNextLine()){
+                String show = readLogo.nextLine();
+                System.out.println(ANSI_BLUE + show  + ANSI_RESET);
+            }
+            readLogo.close();
+        }
+        catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+        System.out.println(ANSI_WHITE_BACKGROUND +ANSI_RED + "\t\t\t\t\t\t\t \033[3m  Tour and Travel Management System  \033[0m" + ANSI_RESET);
+    }
+    void welcome(){
+        try{
+            File logo = new File("Welcome.txt");
+            Scanner readLogo = new Scanner(logo);
+            while (readLogo.hasNextLine()){
+                String show = readLogo.nextLine();
+                System.out.println(show);
+            }
+            readLogo.close();
+        }
+        catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+    void shutDown(){
+        try{
+            File logo = new File("Exit.txt");
+            Scanner readLogo = new Scanner(logo);
+            while (readLogo.hasNextLine()){
+                String show = readLogo.nextLine();
+                System.out.println(show);
+            }
+            readLogo.close();
+        }
+        catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+    void loading(){
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\tLoading\n\n\t\t\t\t\t\t");
+        System.out.print("\t\t\t\t\t\t      ");
+        char x=16;
+        try {
+            for(int i=0;i<50;i++){ 
+                System.out.print(ANSI_WHITE_BACKGROUND +ANSI_PURPLE + x  + ANSI_RESET);
+                if(i<10)
+                    Thread.sleep(150);
+                if(i>=10 && i<20)
+                    Thread.sleep(20);
+                if(i>=10)
+                    Thread.sleep(20);
+            }
+        } 
+        catch (Exception e){   
+        }
+    }
+    void loadingBar(){
+        System.out.print("\n\t\t\t\t\t\t      ");
+        char x=16;
+        try {
+            for(int i=0;i<50;i++){
+                System.out.print(x);
+                if(i<10)
+                    Thread.sleep(10);
+                if(i>=10 && i<20)
+                    Thread.sleep(5);
+                if(i>=10)
+                    Thread.sleep(1);
+            }
+            System.out.print("\n");
+        } 
+        catch (Exception e){   
+        }
+    }
+    public void promptEnterKey(){
+        System.out.println("\t\t\t\t\t\tPress \"ENTER\" to continue...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+    }
     void menuOfFrontMenu() {
         System.out.println("\n\n\t\t\t\t\t\t\t         A Project by ElDorado");
         System.out.println("\t\t\t\t\t\t        Supervised By \033[3mAdil Ahmed Chowdhury Sir\033[0m");
@@ -34,7 +123,6 @@ public class Menus {
         System.out.println("\t\t\t\t\t\t******************************************************");
         System.out.print("\t\t\t\t\t\t\t Enter Your choice: ");
     }
-
     void loginSignup() {
         System.out.println("\t\t\t\t\t\t======================================================");
         System.out.println("\t\t\t\t\t\t|         Please Select from the option Below        |");
@@ -46,14 +134,12 @@ public class Menus {
         System.out.println("\t\t\t\t\t\t******************************************************");
         System.out.print("\t\t\t\t\t\t\t Enter Your choice: ");
     }
-
     void userLogin() {
         System.out.println("\t\t\t\t\t\t======================================================");
         System.out.println("\t\t\t\t\t\t|                    User LOGIN                      |");
         System.out.println("\t\t\t\t\t\t|       Please Provide the Recquired Information     |");
         System.out.println("\t\t\t\t\t\t******************************************************");
     }
-
     void userLoginSuccessfull() {
         System.out.println(
                 ANSI_GREEN + "\t\t\t\t\t\t======================================================" + ANSI_RESET);
@@ -64,7 +150,6 @@ public class Menus {
         System.out.println(
                 ANSI_GREEN + "\t\t\t\t\t\t******************************************************" + ANSI_RESET);
     }
-
     void userLoginUnSuccessfull() {
         System.out
                 .println(ANSI_RED + "\t\t\t\t\t\t======================================================" + ANSI_RESET);
@@ -75,7 +160,6 @@ public class Menus {
         System.out
                 .println(ANSI_RED + "\t\t\t\t\t\t******************************************************" + ANSI_RESET);
     }
-
     void emergencyNumber() {
         System.out.println(ANSI_RED + "\t\t\t\t\t\t======================================================" + ANSI_RESET);
         System.out.println(ANSI_RED + "\t\t\t\t\t\t|                  Emergency Number                  |" + ANSI_RESET);
@@ -94,5 +178,23 @@ public class Menus {
         System.out.println(ANSI_RED + "\t\t\t\t\t\t******************************************************" + ANSI_RESET);
         System.out.print(ANSI_RED + "\t\t\t\t\t\t\t Enter Your choice: " + ANSI_RESET);
     }
-
+    void emergencyNumber1() {
+        System.out.println(ANSI_RED + "\t\t\t\t\t\t======================================================" + ANSI_RESET);
+        System.out.println(ANSI_RED + "\t\t\t\t\t\t|                  Emergency Number                  |" + ANSI_RESET);
+        System.out.println(ANSI_RED + "\t\t\t\t\t\t|              For Fast Resposne call 911            |" + ANSI_RESET);
+        System.out.println(ANSI_RED + "\t\t\t\t\t\t******************************************************" + ANSI_RESET);
+    }
+    
+    void availableBus(String destination) {
+        System.out.println("\t\t\t\t\t\t======================================================");
+        System.out.println("\t\t\t\t\t\t|                    Available Bus                   |");
+        System.out.println("\t\t\t\t\t\t|                      To: "+destination+           "\t\t|");
+        System.out.println("\t\t\t\t\t\t******************************************************");
+    }
 }
+
+
+
+
+
+
