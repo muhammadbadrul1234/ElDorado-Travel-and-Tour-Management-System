@@ -24,132 +24,107 @@ public class Application {
             case 3:
                 new Transportation().busdestination();
                 break;
-
-            case 6:// Feature implementation & testing Purpose
+            case 4:
+                new User().adminLogin();
+                break;
+            case 5:
+                new UserInterface().about();
+                break;
+            case 6:
+                new UserInterface().exit();
+                break;
+            case 7:// Feature implementation & testing Purpose
                 new MongoDB().mongoDBEmergencyDB();
                 break;
             default:
+                frontPage();
                 break;
         }
     }
-
     void emergecyHelp() {
         System.out.print("\033[H\033[2J");
         int x;
+        String Country1 = new String("Bangladesh");
+        String Country2 = new String("India");
+        String Country3 = new String("Nepal");
+        String Country4 = new String("Sri Lanka");
+        String Country5 = new String("United Kingdom");
+        String Country6 = new String("United States");
+        String Country7 = new String("United Arab Emirates");
+        String Country8 = new String("Canada");
+        String Country9 = new String("Australia");
         showlogo.logo();
         new UserInterface().emergencyNumber();
         Scanner scan = new Scanner(System.in);
         x = scan.nextInt();
         switch (x) {
             case 1:
-                System.out.print("\033[H\033[2J");
-                showlogo.logo();
-                new UserInterface().emergencyNumber1();
-                System.out.println("\t\t\t   ______________________________________________________________________________________________");
-                System.out.println("\t\t\t   |         Country            |               Service         |          Contact Number       |");
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                String Country = new String("Bangladesh");
-                new MongoDB().mongoDBEmergencyDBFiler(Country);
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                new UserInterface().promptEnterKey();
-                emergecyHelp();
+                ehelp();
+                new MongoDB().mongoDBEmergencyDBFiler(Country1);
+                eHelpex();
                 break;
             case 2:
-                System.out.print("\033[H\033[2J");
-                showlogo.logo();
-                new UserInterface().emergencyNumber1();
-                System.out.println("\t\t\t   ______________________________________________________________________________________________");
-                System.out.println("\t\t\t   |         Country            |               Service         |          Contact Number       |");
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                String Country = new String("India");
-                new MongoDB().mongoDBEmergencyDBFiler(Country);
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                new UserInterface().promptEnterKey();
-                emergecyHelp();
+                ehelp();
+                new MongoDB().mongoDBEmergencyDBFiler(Country2);
+                eHelpex();
                 break;
             case 3:
-                System.out.print("\033[H\033[2J");
-                showlogo.logo();
-                new UserInterface().emergencyNumber1();
-                System.out.println("\t\t\t   ______________________________________________________________________________________________");
-                System.out.println("\t\t\t   |         Country            |               Service         |          Contact Number       |");
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                String Country = new String("Nepal");
-                new MongoDB().mongoDBEmergencyDBFiler(Country);
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                new UserInterface().promptEnterKey();
-                emergecyHelp();
+                ehelp();
+                new MongoDB().mongoDBEmergencyDBFiler(Country3);
+                eHelpex();
                 break;
             case 4:
-                System.out.print("\033[H\033[2J");
-                showlogo.logo();
-                new UserInterface().emergencyNumber1();
-                System.out.println("\t\t\t   ______________________________________________________________________________________________");
-                System.out.println("\t\t\t   |         Country            |               Service         |          Contact Number       |");
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                String Country = new String("SriLanka");
-                new MongoDB().mongoDBEmergencyDBFiler(Country);
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                new UserInterface().promptEnterKey();
-                emergecyHelp();
+                ehelp();
+                new MongoDB().mongoDBEmergencyDBFiler(Country4);
+                eHelpex();
                 break;
             case 5:
-                System.out.print("\033[H\033[2J");
-                showlogo.logo();
-                new UserInterface().emergencyNumber1();
-                System.out.println("\t\t\t   ______________________________________________________________________________________________");
-                System.out.println("\t\t\t   |         Country            |               Service         |          Contact Number       |");
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                String Country = new String("United Kingdom");
-                new MongoDB().mongoDBEmergencyDBFiler(Country);
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                new UserInterface().promptEnterKey();
-                emergecyHelp();
+                ehelp();
+                new MongoDB().mongoDBEmergencyDBFiler(Country5);
+                eHelpex();
                 break;
             case 6:
-                System.out.print("\033[H\033[2J");
-                showlogo.logo();
-                new UserInterface().emergencyNumber1();
-                System.out.println("\t\t\t   ______________________________________________________________________________________________");
-                System.out.println("\t\t\t   |         Country            |               Service         |          Contact Number       |");
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                String Country = new String("United States of America");
-                new MongoDB().mongoDBEmergencyDBFiler(Country);
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                new UserInterface().promptEnterKey();
-                emergecyHelp();
+                ehelp();    
+                new MongoDB().mongoDBEmergencyDBFiler(Country6);
+                eHelpex();
                 break;
             case 7:
-                System.out.print("\033[H\033[2J");
-                showlogo.logo();
-                new UserInterface().emergencyNumber1();
-                System.out.println("\t\t\t   ______________________________________________________________________________________________");
-                System.out.println("\t\t\t   |         Country            |               Service         |          Contact Number       |");
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                String Country = new String("United Arab Emirates");
-                new MongoDB().mongoDBEmergencyDBFiler(Country);
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                new UserInterface().promptEnterKey();
-                emergecyHelp();
+                ehelp();
+                new MongoDB().mongoDBEmergencyDBFiler(Country7);
+                eHelpex();
                 break;
             case 8:
-                System.out.print("\033[H\033[2J");
-                showlogo.logo();
-                new UserInterface().emergencyNumber1();
-                System.out.println("\t\t\t   ______________________________________________________________________________________________");
-                System.out.println("\t\t\t   |         Country            |               Service         |          Contact Number       |");
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                new MongoDB().mongoDBEmergencyDB();
-                System.out.println("\t\t\t   +--------------------------------------------------------------------------------------------+");
-                new UserInterface().promptEnterKey();
-                emergecyHelp();
+                ehelp();
+                new MongoDB().mongoDBEmergencyDBFiler(Country8);
+                eHelpex();
                 break;
             case 9:
+                ehelp();
+                new MongoDB().mongoDBEmergencyDBFiler(Country9);
+                eHelpex();
+                break;
+            case 10:
+                ehelp();
+                new MongoDB().mongoDBEmergencyDB();
+                eHelpex();
+                break;
+            case 11:
                 frontPage();
                 break;
             default:
                 emergecyHelp();
                 break;
         }
+    }
+    void ehelp(){
+        System.out.print("\033[H\033[2J");
+        showlogo.logo();
+        new UserInterface().emergencyNumber1();
+        new UserInterface().emergencyNumber2();
+    }
+    void eHelpex(){
+        new UserInterface().emergencyNumber3();
+        new UserInterface().promptEnterKey();
+        emergecyHelp();  
     }
 }

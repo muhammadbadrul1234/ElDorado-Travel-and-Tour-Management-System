@@ -14,19 +14,20 @@ public class MongoDB {
     MongoCollection<Document> collection;
     MongoCollection<Document> collectionbus;
     MongoCollection<Document> collectionedb;
-    FindIterable<Document> iterdoc, iterdocbus, iterdocedb;
+    MongoCollection<Document> collectionadmin;
+    FindIterable<Document> iterdoc, iterdocbus, iterdocedb,iterdocadmin;
     public MongoDB() {
-        //Logger.getLogger
         Logger.getLogger("org.mongodb.driver").setLevel(Level.OFF);
-       // System.out.print("\033[H\033[2J");
         client = MongoClients.create("mongodb+srv://ElDorado1:MAcmw0ldFbNTvLdU@eldorado1.wuakt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
         db = client.getDatabase("User");
         collection = db.getCollection("Database");
         collectionbus = db.getCollection("BUSDB");
         collectionedb = db.getCollection("EmergencyContactDatabase");
+        collectionadmin = db.getCollection("Admin");
         iterdoc = collection.find(); // is a list of iterable document
         iterdocbus = collectionbus.find();
         iterdocedb = collectionedb.find();
+        iterdocadmin = collectionadmin.find();
     }
     void mongoDB() {
         for (Document doc : iterdoc)
@@ -75,6 +76,14 @@ public class MongoDB {
         if (doc == null)
             return false;
         if (doc.get("Passeord").equals(password))
+            return true;
+        return false;
+    }
+    public boolean adminpasswordAuth(String user, String password) {
+        Document doc = collectionadmin.find(Filters.eq("User", user)).first();
+        if (doc == null)
+            return false;
+        if (doc.get("Pass").equals(password))
             return true;
         return false;
     }
