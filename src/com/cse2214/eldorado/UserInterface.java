@@ -107,7 +107,7 @@ public class UserInterface {
     void loading() {
         System.out.println("\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\tLoading\n\n\t\t\t\t\t\t");
         System.out.print("\t\t\t\t\t\t      ");
-        char x = 16;
+        /*char x = 16;
         try {
             for (int i = 0; i < 50; i++) {
                 System.out.print(ANSI_WHITE_BACKGROUND + ANSI_PURPLE + x + ANSI_RESET);
@@ -119,7 +119,7 @@ public class UserInterface {
                     Thread.sleep(20);
             }
         } catch (Exception e) {
-        }
+        }*/
     }
 
     void loadingBar() {
@@ -190,11 +190,39 @@ public class UserInterface {
         System.out.print("\t\t\t\t\t\t Enter Your choice: ");
     }
     void adminMenu1(){
+        
         System.out.print("\t\t\t\t\t\t======================================================\n");
         System.out.print("\t\t\t\t\t\t|                    ADMIN MENU                      |\n");
-        System.out.print("\t\t\t\t\t\t|                  List of Users                     |\n");
+        System.out.print("\t\t\t\t\t\t|          Please Select from the option Below       |\n");
         System.out.print("\t\t\t\t\t\t******************************************************\n");
     }
+    void adminMenu11(){
+        System.out.print("\t\t\t\t\t\t======================================================\n");
+        System.out.print("\t\t\t\t\t\t|                    ADMIN MENU                      |\n");
+        System.out.print("\t\t\t\t\t\t|                 List of All Users                  |\n");
+        System.out.print("\t\t\t\t\t\t******************************************************\n");
+    }
+    void adminMenu12(){
+        System.out.print("\t\t\t\t\t\t======================================================\n");
+        System.out.print("\t\t\t\t\t\t|                    ADMIN MENU                      |\n");
+        System.out.print("\t\t\t\t\t\t|              Individual User Details               |\n");
+        System.out.print("\t\t\t\t\t\t******************************************************\n");
+    }
+    
+    void adminMenu111(){
+        System.out.print("\033[H\033[2J");
+        logo();
+        adminMenu11();
+        System.out.print("\t\t\t\t\t\t+----------------------------------------------------+\n");
+        System.out.print("\t\t\t\t\t\t|    USER ID    |                 Name               |\n");
+        System.out.print("\t\t\t\t\t\t+----------------------------------------------------+\n");
+        new MongoDB().mongoDB();
+        adminmenu112();
+        }
+    void adminmenu112(){
+    System.out.print("\t\t\t\t\t\t+----------------------------------------------------+\n");
+    }
+
     void loginSignup() {
         System.out.println("\t\t\t\t\t\t======================================================");
         System.out.println("\t\t\t\t\t\t|                        User                        |");

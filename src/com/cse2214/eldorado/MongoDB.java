@@ -30,8 +30,10 @@ public class MongoDB {
         iterdocadmin = collectionadmin.find();
     }
     void mongoDB() {
-        for (Document doc : iterdoc)
-            System.out.println(doc.get("User Number") + "\t|\t" + doc.get("Name"));
+        for (Document doc : iterdoc){
+            System.out.print("\t\t\t\t\t\t|\t");
+            System.out.format("%10s%25s",doc.get("User Number") + "\t|\t" , doc.get("Name")+"\t     |\n");
+        }
     }
     void mongoDBBus() {
         for (Document doc : iterdocbus)

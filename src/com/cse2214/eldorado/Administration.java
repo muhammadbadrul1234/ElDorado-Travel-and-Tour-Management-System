@@ -10,17 +10,23 @@ public class Administration{
         logo.logo();
         new UserInterface().adminMenu();
         int menu;
+        String Name;
         menu = scan.nextInt();
         switch(menu) {
             case 1:
-                System.out.print("\033[H\033[2J");
-                logo.logo();
-                new UserInterface().adminMenu1();
-                new MongoDB().mongoDB();
+                new UserInterface().adminMenu111();
+                new UserInterface().promptEnterKey();
+                administration();
                 break;
             case 2:
+                System.out.print("\t\t\t\t\t\t\t");
+                System.out.print(" Email User/Email : ");
+                Name = scan.nextLine();
                 System.out.print("\033[H\033[2J");
-                logo.logo();
+                new UserInterface().logo();
+                new UserInterface().adminMenu12();
+                new UserInterface().promptEnterKey();
+                administration();
                 break;
             case 3:
                 System.out.print("\033[H\033[2J");
@@ -70,8 +76,8 @@ public class Administration{
                 System.out.print("\033[H\033[2J");
                 logo.logo();
                 break;
-
             default:
+                administration();
                 break;
         }
 
