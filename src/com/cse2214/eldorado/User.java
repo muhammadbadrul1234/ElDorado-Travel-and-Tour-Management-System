@@ -100,6 +100,12 @@ public class User {
             menu2.userLoginSuccessfull();
             UserInterface showloading2 = new UserInterface();
             showloading2.loadingBar();
+            try {
+                Thread.Sleep(1000);
+            } catch (Exception e) {
+                //TODO: handle exception
+            }
+            
         } else {
             System.out.print("\033[H\033[2J");
             UserInterface showlogo1 = new UserInterface();
