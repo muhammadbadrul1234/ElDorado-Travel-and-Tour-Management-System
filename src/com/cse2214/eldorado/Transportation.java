@@ -11,7 +11,7 @@ public class Transportation {
 
     }
     
-    void eldoradotransportation() {
+   /* void eldoradotransportation() {
 
         // system("cls");
 
@@ -60,9 +60,9 @@ public class Transportation {
 
         }
 
-    }
+    } */
 
-    void domestictransportation() {
+   /* void domestictransportation() {
 
         // system("cls");
 
@@ -122,7 +122,7 @@ public class Transportation {
 
         }
 
-    }
+    } */
 
     // domestic bus ticket booking
     void domesticbus() {
@@ -1830,6 +1830,17 @@ public class Transportation {
     }
 
     void internationalplaneexit() {
+
+    }
+
+
+
+    void immigrationhelp()
+    {
+
+               //
+
+
 
     }
 
