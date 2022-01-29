@@ -34,7 +34,7 @@ public class Application {
                 new UserInterface().exit();
                 break;
             case 7:// Feature implementation & testing Purpose
-                new Transportation().traindestination();
+                new Application().usersLogin();
                 break;
             default:
                 frontPage();
@@ -140,28 +140,27 @@ public class Application {
         choice = scan.nextInt();
         switch (choice) {
             case 1:{
+                new Transportation().busdestination();
                 break;
             }
             case 2: {
-                Transportation domestictrain = new Transportation();
+                new Transportation().traindestination();
                 break;
             }
             case 3: {
-                Transportation domesticplane = new Transportation();
+                new Transportation().planedestination();
                 break;
             }
             case 4: {
-                Transportation internationalplane = new Transportation();
+               new Transportation().hoteldestination();
                 break;
             }
             case 5: {
-                Hotel domestichotel = new Hotel();
-                domestichotel.domesticHotelRental();
+                new Transportation().planedestination2();
                 break;
             }
             case 6: {
-                Hotel internationalhotel = new Hotel();
-                internationalhotel.internationalHotelRental();
+                new Transportation().hoteldestination2();
             }
             case 7: {
                 Transportation immigration = new Transportation();

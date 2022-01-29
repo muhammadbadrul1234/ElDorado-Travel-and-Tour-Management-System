@@ -17,7 +17,12 @@ public class MongoDB {
     MongoCollection<Document> collectionedb;
     MongoCollection<Document> collectionadmin;
     MongoCollection<Document> collectiontrain;
-    FindIterable<Document> iterdoc, iterdocbus, iterdocedb,iterdocadmin,iterdoctrain;
+    MongoCollection<Document> collectionplane;
+    MongoCollection<Document> collectionplane2;
+    MongoCollection<Document> collectionhotel;
+    MongoCollection<Document> collectionhotel2;
+    
+    FindIterable<Document> iterdoc, iterdocbus, iterdocedb,iterdocadmin,iterdoctrain,iterdocplane,iterdocplane2,iterdochotel,iterdochotel2;
     public MongoDB() {
         Logger.getLogger("org.mongodb.driver").setLevel(Level.OFF);
         client = MongoClients.create("mongodb+srv://ElDorado1:MAcmw0ldFbNTvLdU@eldorado1.wuakt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
@@ -27,11 +32,19 @@ public class MongoDB {
         collectionedb = db.getCollection("EmergencyContactDatabase");
         collectionadmin = db.getCollection("Admin");
         collectiontrain = db.getCollection("TrainDB");
+        collectionplane = db.getCollection("DomesticFlight");
+        collectionplane2 = db.getCollection("InternationalFlight");
+        collectionhotel = db.getCollection("HotelLocal");
+        collectionhotel2 = db.getCollection("HotelInternational");
         iterdoc = collection.find(); // is a list of iterable document
         iterdocbus = collectionbus.find();
         iterdocedb = collectionedb.find();
         iterdocadmin = collectionadmin.find();
         iterdoctrain = collectiontrain.find();
+        iterdocplane = collectionplane.find();
+        iterdocplane2 = collectionplane2.find();
+        iterdochotel = collectionhotel.find();
+        iterdochotel2 = collectionhotel2.find();
 
     }
     void mongoDB() {
@@ -73,6 +86,67 @@ public class MongoDB {
             }
         }
         return array2;
+    }
+    ArrayList<Integer>mongoDBPlaneFinder(String From,String To) {
+        int sum=1;
+        int Bticketprice;
+        ArrayList<Integer> array3 = new ArrayList<Integer>();
+        for(Document doc : iterdocplane){
+            if (doc.get("To").equals(To)){
+                System.out.print("\n\t\t|");
+                Bticketprice = doc.getInteger("Fare");
+                array3.add(Bticketprice);
+                System.out.format("%5s%10s%10s%20s%20s%6s%4s%4s", sum+"\t|", From, "-"+doc.get("To") + "\t|", doc.get("Plane") + "\t|\t",doc.get("Class")+"|",doc.get("Time")+ "|" , doc.get("Fare") + "\t|\t",doc.get("TicketAvail")+"\t|");
+                sum++; 
+            }
+        }
+        return array3;
+    }
+    ArrayList<Integer>mongoDBPlaneFinder2(String From,String To) {
+        int sum=1;
+        int Bticketprice;
+        ArrayList<Integer> array3 = new ArrayList<Integer>();
+        for(Document doc : iterdocplane2){
+            if (doc.get("To").equals(To)){
+                System.out.print("\n\t\t|");
+                Bticketprice = doc.getInteger("Fare");
+                array3.add(Bticketprice);
+                System.out.format("%5s%10s%10s%20s%20s%6s%4s%4s", sum+"\t|", From, "-"+doc.get("To") + "\t|", doc.get("Plane") + "\t|\t",doc.get("Class")+"|",doc.get("Time")+ "|" , doc.get("Fare") + "|\t",doc.get("TicketAvail")+"\t|");
+                sum++; 
+            }
+        }
+        return array3;
+    }
+    ArrayList<Integer>mongoDBHotelFinder(String From,String To) {
+        int sum=1;
+        int Bticketprice;
+        ArrayList<Integer> array4 = new ArrayList<Integer>();
+        for(Document doc : iterdochotel
+        ){
+            if (doc.get("Place").equals(To)){
+                System.out.print("\n\t\t\t\t\t\t|");
+                Bticketprice = doc.getInteger("Price");
+                array4.add(Bticketprice);
+                System.out.format("%5s%20s%5s",sum,"\t|"+doc.get("HotelName") + "\t|\t" , doc.get("Price")+"\t     |");
+                sum++; 
+            }
+        }
+        return array4;
+    }
+    ArrayList<Integer>mongoDBHotelFinder2(String From,String to) {
+        int sum=1;
+        int Bticketprice;
+        ArrayList<Integer> array4 = new ArrayList<Integer>();
+        for(Document doc : iterdochotel2){
+            if (doc.get("Place").equals(to)){
+                System.out.print("\n\t\t\t\t\t\t|");
+                Bticketprice = doc.getInteger("Price");
+                array4.add(Bticketprice);
+                System.out.format("%5s%20s%5s",sum,"\t|"+doc.get("HotelName") + "\t|\t" , doc.get("Price")+"\t     |");
+                sum++; 
+            }
+        }
+        return array4;
     }
     void insertMongoDB(int User_Number, String... args) {
         Document doc = new Document("User Number", User_Number)

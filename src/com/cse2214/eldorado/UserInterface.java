@@ -413,10 +413,28 @@ public class UserInterface {
                 System.out.println("\t\t\t\t\t\t                       To: " + destination);
                 System.out.println("\t\t\t\t\t\t******************************************************");
         }
-        void availablePlane(String destination) {
+        void availablePlane1(String destination) {
                 System.out.println("\t\t\t\t\t\t======================================================");
-                System.out.println("\t\t\t\t\t\t|                    Available Plane                 |");
-                System.out.println("\t\t\t\t\t\t                       To: " + destination);
+                System.out.println("\t\t\t\t\t\t|              Available Domestic Plane              |");
+                System.out.println("\t\t\t\t\t\t                   To: " + destination);
+                System.out.println("\t\t\t\t\t\t******************************************************");
+        }
+        void availablePlane2(String destination) {
+                System.out.println("\t\t\t\t\t\t======================================================");
+                System.out.println("\t\t\t\t\t\t|           Available International Plane            |");
+                System.out.println("\t\t\t\t\t\t                 To: " + destination);
+                System.out.println("\t\t\t\t\t\t******************************************************");
+        }
+        void availablehotel(String destination) {
+                System.out.println("\t\t\t\t\t\t======================================================");
+                System.out.println("\t\t\t\t\t\t|                Available Local Hotel               |");
+                System.out.println("\t\t\t\t\t\t                   Place: " + destination);
+                System.out.println("\t\t\t\t\t\t******************************************************");
+        }
+        void availablehotel2(String destination) {
+                System.out.println("\t\t\t\t\t\t======================================================");
+                System.out.println("\t\t\t\t\t\t|            Available International Hotel           |");
+                System.out.println("\t\t\t\t\t\t                 Place: " + destination);
                 System.out.println("\t\t\t\t\t\t******************************************************");
         }
 
