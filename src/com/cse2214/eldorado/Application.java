@@ -34,7 +34,7 @@ public class Application {
                 new UserInterface().exit();
                 break;
             case 7:// Feature implementation & testing Purpose
-                new MongoDB().mongoDBEmergencyDB();
+                new Administration().administration();
                 break;
             default:
                 frontPage();

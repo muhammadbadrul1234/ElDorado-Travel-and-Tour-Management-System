@@ -167,7 +167,7 @@ public class UserInterface {
         System.out.println("\t\t\t\t\t\t******************************************************");
         System.out.print("\t\t\t\t\t\t\t Enter Your choice: ");
     }
-    void adminmenu(){
+    void adminMenu(){
         System.out.print("\t\t\t\t\t\t======================================================\n");
         System.out.print("\t\t\t\t\t\t|                    ADMIN MENU                      |\n");
         System.out.print("\t\t\t\t\t\t|          Please Select from the option Below       |\n");
@@ -187,11 +187,17 @@ public class UserInterface {
         System.out.print("\t\t\t\t\t\t|         13. Modify Hotel Details                   |\n");
         System.out.print("\t\t\t\t\t\t|         14. Return to Previous Menu                |\n");
         System.out.print("\t\t\t\t\t\t******************************************************\n");
-        System.out.print("\t\t\t\t\t\t Enter Your choice: \n");
+        System.out.print("\t\t\t\t\t\t Enter Your choice: ");
     }
-
+    void adminMenu1(){
+        System.out.print("\t\t\t\t\t\t======================================================\n");
+        System.out.print("\t\t\t\t\t\t|                    ADMIN MENU                      |\n");
+        System.out.print("\t\t\t\t\t\t|                  List of Users                     |\n");
+        System.out.print("\t\t\t\t\t\t******************************************************\n");
+    }
     void loginSignup() {
         System.out.println("\t\t\t\t\t\t======================================================");
+        System.out.println("\t\t\t\t\t\t|                        User                        |");
         System.out.println("\t\t\t\t\t\t|         Please Select from the option Below        |");
         System.out.println("\t\t\t\t\t\t******************************************************");
         System.out.println("\t\t\t\t\t\t|               1. Login                             |");

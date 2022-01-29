@@ -30,7 +30,6 @@ public class User {
                 Thread.sleep(2500);
             } catch (Exception e) {
             }
-            new Application().frontPage();
             new Administration().administration();
         } else {
             System.out.print("\033[H\033[2J");
