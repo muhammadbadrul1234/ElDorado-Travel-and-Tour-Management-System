@@ -180,9 +180,9 @@ public class Transportation {
     void hoteldestination() {
         Scanner scan = new Scanner(System.in);
         String destination;
-        String to;
-        System.out.print("\t\t\t\t\t\t Enter Start Point:");
-        to = scan.nextLine();
+        String to="X";
+        //System.out.print("\t\t\t\t\t\t Enter Start Point:");
+       // to = scan.nextLine();
         System.out.print("\t\t\t\t\t\t Enter Destination:");
         destination = scan.nextLine();
         new UserInterface().loadingBar();
@@ -200,7 +200,7 @@ public class Transportation {
         System.out.print(
                 "\n\t\t\t\t\t\t+----------------------------------------------------+\n");
         int num1, num2;
-        System.out.print("\t\t\t\t\t\t Which one do you want to buy       : ");
+        System.out.print("\t\t\t\t\t\t Which one do you want to book       : ");
         num1 = scan.nextInt();
         System.out.print("\t\t\t\t\t\t How many Room do you want to book: ");
         num2 = scan.nextInt();
@@ -218,9 +218,9 @@ public class Transportation {
     void hoteldestination2() {
         Scanner scan = new Scanner(System.in);
         String destination;
-        String to;
-        System.out.print("\t\t\t\t\t\t Enter Start Point:");
-        to = scan.nextLine();
+        String to="x";
+       // System.out.print("\t\t\t\t\t\t Enter Start Point:");
+       // to = scan.nextLine();
         System.out.print("\t\t\t\t\t\t Enter Destination:");
         destination = scan.nextLine();
         //int x;
@@ -234,14 +234,14 @@ public class Transportation {
         System.out.print(
                 "\t\t\t\t\t\t|   SL  |         Hotel Name     |         Price     |");
         System.out.print(
-                "\n\t\t\t\t\t\t+--------------------------------------------------+");
+                "\n\t\t\t\t\t\t+----------------------------------------------------+");
         ArrayList<Integer> Fares = new MongoDB().mongoDBHotelFinder2(to, destination);
         System.out.print(
-                "\n\t\t\t\t\t\t+--------------------------------------------------+\n");
+                "\n\t\t\t\t\t\t+----------------------------------------------------+\n");
         int num1, num2;
-        System.out.print("\t\t\t\t Which one do you want to buy       : ");
+        System.out.print("\t\t\t\t\t\t Which one do you want to book       : ");
         num1 = scan.nextInt();
-        System.out.print("\t\t\t\t How many Room do you want to book: ");
+        System.out.print("\t\t\t\t\t\t How many Room do you want to book: ");
         num2 = scan.nextInt();
         int cost = Fares.get(num1 - 1) * num2;
         System.out.print(
@@ -253,6 +253,12 @@ public class Transportation {
         System.out.print(
                 "\n\t\t\t\t|_______________________________________________________________________________________|\n");
         new UserInterface().promptEnterKey(); 
+    }
+    void paymentGateway()
+    {
+
+        new 
+
     }
 
 }

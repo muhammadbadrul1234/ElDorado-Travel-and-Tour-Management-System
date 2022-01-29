@@ -127,7 +127,7 @@ public class MongoDB {
                 System.out.print("\n\t\t\t\t\t\t|");
                 Bticketprice = doc.getInteger("Price");
                 array4.add(Bticketprice);
-                System.out.format("%5s%20s%5s",sum,"\t|"+doc.get("HotelName") + "\t|\t" , doc.get("Price")+"\t     |");
+                System.out.format("%8s%22s%20s",sum+"|",doc.get("HotelName") + "\t |" , doc.get("Price")+"|");
                 sum++; 
             }
         }
@@ -142,7 +142,7 @@ public class MongoDB {
                 System.out.print("\n\t\t\t\t\t\t|");
                 Bticketprice = doc.getInteger("Price");
                 array4.add(Bticketprice);
-                System.out.format("%5s%20s%5s",sum,"\t|"+doc.get("HotelName") + "\t|\t" , doc.get("Price")+"\t     |");
+                System.out.format("%8s%22s%20s",sum+"|",doc.get("HotelName") + "\t |" , doc.get("Price")+"|");
                 sum++; 
             }
         }
