@@ -101,11 +101,13 @@ public class User {
             UserInterface showloading2 = new UserInterface();
             showloading2.loadingBar();
             try {
-                Thread.Sleep(1000);
+                Thread.sleep(1500);
             } catch (Exception e) {
-                //TODO: handle exception
             }
-            
+            System.out.print("\033[H\033[2J");
+            showlogo1.logo();
+            new Application().usersLogin();
+
         } else {
             System.out.print("\033[H\033[2J");
             UserInterface showlogo1 = new UserInterface();

@@ -360,7 +360,7 @@ public class UserInterface {
     void availableBus(String destination) {
         System.out.println("\t\t\t\t\t\t======================================================");
         System.out.println("\t\t\t\t\t\t|                    Available Bus                   |");
-        System.out.println("\t\t\t\t\t\t|                      To: " + destination + "\t\t|");
+        System.out.println("\t\t\t\t\t\t                       To: " + destination );
         System.out.println("\t\t\t\t\t\t******************************************************");
     }
 
@@ -373,5 +373,24 @@ public class UserInterface {
                 .println(ANSI_BLUE + "\t\t\t\t\t\t|            The Software and the Developers         |" + ANSI_RESET);
         System.out
                 .println(ANSI_BLUE + "\t\t\t\t\t\t******************************************************" + ANSI_RESET);
+    }
+
+    void userLoginMenu(){
+        System.out.print("\033[H\033[2J");
+        logo();
+        System.out.print("\t\t\t\t\t\t======================================================\n");
+        System.out.print("\t\t\t\t\t\t|                 EL Dorado Service                  |\n");
+        System.out.print("\t\t\t\t\t\t|          Please Select from the option Below       |\n");
+        System.out.print("\t\t\t\t\t\t******************************************************\n");
+        System.out.print("\t\t\t\t\t\t|          1. Domestic Bus                           |\n");
+        System.out.print("\t\t\t\t\t\t|          2. Domestic Train                         |\n");
+        System.out.print("\t\t\t\t\t\t|          3. Domestic Flight                        |\n");
+        System.out.print("\t\t\t\t\t\t|          4. Domestic Hotel Rental                  |\n");
+        System.out.print("\t\t\t\t\t\t|          5. International Flight                   |\n");
+        System.out.print("\t\t\t\t\t\t|          6. International Hotel                    |\n");
+        System.out.print("\t\t\t\t\t\t|          7. Immigration Help                       |\n");
+        System.out.print("\t\t\t\t\t\t|          8. Return to Previous Menu                |\n");
+        System.out.print("\t\t\t\t\t\t******************************************************\n");
+
     }
 }

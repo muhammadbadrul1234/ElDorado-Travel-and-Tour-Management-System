@@ -39,12 +39,14 @@ public class MongoDB {
         for (Document doc : iterdocbus)
             System.out.println(doc.get("From_City") + "\t|\t" + doc.get("Fare"));
     }
-    void mongoDBBusFinder(String To_City) {
+    void mongoDBBusFinder(String From,String To) {
+        int sum=1;
         for(Document doc : iterdocbus){
-            if (doc.get("To_City").equals(To_City)){
+            if (doc.get("To").equals(To)){
                 System.out.print("\n\t\t\t\t|");
-                System.out.format("%15s%15s%15s%4s", doc.get("To_City") + "\t|\t", doc.get("Bus_Name") + "\t|\t",doc.get("Departure_time")+ "\t|\t" , doc.get("Fare") + "\t|");
+                System.out.format("%5s%10s%10s%20s%6s%4s%4s", sum+"\t|", From, "-"+doc.get("To") + "\t|", doc.get("Bus") + "\t|",doc.get("Time")+ "\t|" , doc.get("Fare") + "\t|\t",doc.get("Fare")+"\t|");
                 int Fare=1;//doc.get("Fare");
+                sum++;
                 new Transportation().fareGenerator(Fare);
             }
         }
@@ -89,6 +91,7 @@ public class MongoDB {
             return true;
         return false;
     }
+    
     void mongoDBEmergencyDB() {
         for (Document doc : iterdocedb) {
             System.out.print("\t\t\t   |");

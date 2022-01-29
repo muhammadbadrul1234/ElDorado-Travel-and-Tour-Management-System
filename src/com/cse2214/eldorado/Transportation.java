@@ -1,264 +1,50 @@
 package com.cse2214.eldorado;
+
 //Takrim
 import java.util.Scanner;
+
 public class Transportation {
     UserInterface logo = new UserInterface();
-    //UserInterface 
+    // UserInterface
 
-
-    void fareGenerator(int Fare){
-
+    void fareGenerator(int Fare) {
 
     }
-    
-   /* void eldoradotransportation() {
-
-        // system("cls");
-
-        // loading();
-
-        // logo();
-
-        System.out.println("\t\t\t\t\t\t==========================================================");
-        System.out.println("\t\t\t\t\t\t|                  Welcome To EL-DORADO                  |");
-        System.out.println("\t\t\t\t\t\t|                 Transportation Service                 |");
-        System.out.println("\t\t\t\t\t\t==========================================================");
-        System.out.println("\t\t\t\t\t\t======================================================");
-        System.out.println("\t\t\t\t\t\t|           Please Select Your Travel Type            |");
-        System.out.println("\t\t\t\t\t\t******************************************************");
-        System.out.println("\t\t\t\t\t\t|               1. Domestic Travel                   |");
-        System.out.println("\t\t\t\t\t\t|               2. International Travel              |");
-        System.out.println("\t\t\t\t\t\t|               3. Return To Homepage                |");
-        System.out.println("\t\t\t\t\t\t******************************************************");
-
-        int traveltype;
-        Scanner scan = new Scanner(System.in);
-        traveltype = scan.nextInt();
-
-        switch (traveltype) {
-
-            case 1: {
-
-                Transportation travtype = new Transportation();
-                travtype.domestictransportation();
-
-            }
-
-            case 2: {
-
-                // International Travel
-
-            }
-
-            case 3:
-
-            {
-
-                // Retrun to homepage
-
-            }
-
-        }
-
-    } */
-
-   /* void domestictransportation() {
-
-        // system("cls");
-
-        // loading();
-
-        // logo();
-
-        int selectvehicletype;
-
-        System.out.println("\t\t\t\t\t\t==========================================================");
-        System.out.println("\t\t\t\t\t\t|                  Welcome To EL-DORADO                  |");
-        System.out.println("\t\t\t\t\t\t|                    Domestic Travel                     |");
-        System.out.println("\t\t\t\t\t\t==========================================================");
-        System.out.println("\t\t\t\t\t\t======================================================");
-        System.out.println("\t\t\t\t\t\t|          Please Select The Vehicle Type            |");
-        System.out.println("\t\t\t\t\t\t******************************************************");
-        System.out.println("\t\t\t\t\t\t|               1. Bus                               |");
-        System.out.println("\t\t\t\t\t\t|               2. Train                             |");
-        System.out.println("\t\t\t\t\t\t|               3. Aeroplane                         |");
-        System.out.println("\t\t\t\t\t\t|               4. Return To Homepage                |");
-        System.out.println("\t\t\t\t\t\t******************************************************");
-
-        Scanner scan = new Scanner(System.in);
-        System.out.print("\t\t\t\t\t\t\t Enter Your choice: ");
-        selectvehicletype = scan.nextInt();
-
-        switch (selectvehicletype) {
-
-            case 1: {
-
-                Transportation bus = new Transportation();
-                bus.domesticbus();
-
-            }
-
-            case 2: {
-
-                Transportation train = new Transportation();
-                train.domestictrain();
-
-            }
-
-            case 3:
-
-            {
-
-                Transportation plane = new Transportation();
-                plane.domesticplane();
-
-            }
-
-            case 4: {
-
-                // return to homepage
-
-            }
-
-        }
-
-    } */
-
-    // domestic bus ticket booking
-    void domesticbus() {
-
-        // system("cls");
-
-        // loading();
-
-        // logo();
-
-        int choice, n = 1;
-
-        System.out.println("\t\t\t\t\t\t======================================================");
-        System.out.println("\t\t\t\t\t\t|          ** BUS RESERVATION AND TICKETING SYSTEM   **");
-        System.out.println("\t\t\t\t\t\t******************************************************");
-        System.out.println("\t\t\t\t\t\t|               1. Profile Creation                  |");
-        System.out.println("\t\t\t\t\t\t|               2. Destination                       |");
-        System.out.println("\t\t\t\t\t\t|               3. Payment                           |");
-        System.out.println("\t\t\t\t\t\t|               4. View Profile                      |");
-        System.out.println("\t\t\t\t\t\t|               5. Exit                              |");
-        System.out.println("\t\t\t\t\t\t******************************************************");
-
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter Your Choice: ");
-        choice = scan.nextInt();
-
-        switch (choice) {
-
-            case 1: {
-
-                Transportation transportation = new Transportation();
-                transportation.buspassengerprofile();
-                n++;
-
-            }
-
-            case 2: {
-
-                if (n < choice)
-                    break;
-
-                Transportation des = new Transportation();
-                des.busdestination();
-                n++;
-
-            }
-
-            case 3: {
-
-                if (n < choice)
-                    break;
-                Transportation pur = new Transportation();
-                pur.buspurchase();
-                n++;
-
-            }
-
-            case 4: {
-
-                if (n < choice)
-                    break;
-
-                Transportation viw = new Transportation();
-
-                // viw.busview();
-
-                n++;
-
-            }
-
-            case 5: {
-
-                Transportation ex = new Transportation();
-
-                // ex.busexit()
-
-            }
-
-        }
-    }
-
-    void buspassengerprofile()
-
-    {
-        // system("cls");
-
-        // loading();
-
-        // logo();
-
+    void buspassengerprofile(){
         Scanner scan = new Scanner(System.in);
         String name, currentlocation, mobilenumber, email;
-
         System.out.print("\t\t\t\t\t\t\tEnter Your Name: ");
         name = scan.nextLine();
-
         System.out.print("\t\t\t\t\t\t\tEnter Your Current Location: ");
         currentlocation = scan.nextLine();
-
         System.out.print("\t\t\t\t\t\t\tEnter YOur Mobile Number: ");
         mobilenumber = scan.nextLine();
-
         System.out.print("\t\t\t\t\t\t\tEnter Your Email: ");
         email = scan.nextLine();
-
         System.out.println("\t\t\t\t\t\t\tYour Name:  " + name);
         System.out.println("\t\t\t\t\t\t\tYour Current Location:  " + currentlocation);
         System.out.println("\t\t\t\t\t\t\tYour Mobile Number:  " + mobilenumber);
         System.out.println("\t\t\t\t\t\t\tYour Email:  " + email);
-
     }
-
-    void busdestination(){
-        // system("cls");
-        // loading();
-        // logo();
+    void busdestination() {
         Scanner scan = new Scanner(System.in);
         String destination;
-        System.out.print("\t\t\t\t\t\t\tSelect Your Destination: ");
+        String to;
+        System.out.print("\t\t\t\t\t\t Enter Start Point:");
+        to = scan.nextLine();
+        System.out.print("\t\t\t\t\t\t Enter Destination:");
         destination = scan.nextLine();
         new UserInterface().loadingBar();
         System.out.print("\033[H\033[2J");
         logo.logo();
         new UserInterface().availableBus(destination);
         System.out.println("\t\t\t\t\t\tThe Available Buses list Acoording to Your Destination:  ");
-        System.out.print("\t\t\t\t_________________________________________________________________________________\n");
-        System.out.print("\t\t\t\t|  Destination  |       Bus Name        |         Time         |      Fare      |");
-        System.out.print("\n\t\t\t\t+-------------------------------------------------------------------------------+");                               
-        new MongoDB().mongoDBBusFinder(destination);
-        System.out.print("\n\t\t\t\t+-------------------------------------------------------------------------------+\n");
-
-
-        // bus database
+        System.out.print("\t\t\t\t_________________________________________________________________________________________\n");
+        System.out.print("\t\t\t\t|   SL  |         Route         |           Bus Name    |  Time | Fare  |AvailableTicket|");
+        System.out.print("\n\t\t\t\t+---------------------------------------------------------------------------------------+");
+        new MongoDB().mongoDBBusFinder(to, destination);
+        System.out.print("\n\t\t\t\t+---------------------------------------------------------------------------------------+\n");
     }
-
-
     void buspurchase() {
 
         // system("cls");
@@ -1833,15 +1619,290 @@ public class Transportation {
 
     }
 
+    void immigrationhelp() {
 
-
-    void immigrationhelp()
-    {
-
-               //
-
-
+        //
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    /*
+     * void eldoradotransportation() {
+     * 
+     * // system("cls");
+     * 
+     * // loading();
+     * 
+     * // logo();
+     * 
+     * System.out.println(
+     * "\t\t\t\t\t\t==========================================================");
+     * System.out.
+     * println("\t\t\t\t\t\t|                  Welcome To EL-DORADO                  |"
+     * );
+     * System.out.
+     * println("\t\t\t\t\t\t|                 Transportation Service                 |"
+     * );
+     * System.out.println(
+     * "\t\t\t\t\t\t==========================================================");
+     * System.out.println(
+     * "\t\t\t\t\t\t======================================================");
+     * System.out.
+     * println("\t\t\t\t\t\t|           Please Select Your Travel Type            |"
+     * );
+     * System.out.println(
+     * "\t\t\t\t\t\t******************************************************");
+     * System.out.
+     * println("\t\t\t\t\t\t|               1. Domestic Travel                   |"
+     * );
+     * System.out.
+     * println("\t\t\t\t\t\t|               2. International Travel              |"
+     * );
+     * System.out.
+     * println("\t\t\t\t\t\t|               3. Return To Homepage                |"
+     * );
+     * System.out.println(
+     * "\t\t\t\t\t\t******************************************************");
+     * 
+     * int traveltype;
+     * Scanner scan = new Scanner(System.in);
+     * traveltype = scan.nextInt();
+     * 
+     * switch (traveltype) {
+     * 
+     * case 1: {
+     * 
+     * Transportation travtype = new Transportation();
+     * travtype.domestictransportation();
+     * 
+     * }
+     * 
+     * case 2: {
+     * 
+     * // International Travel
+     * 
+     * }
+     * 
+     * case 3:
+     * 
+     * {
+     * 
+     * // Retrun to homepage
+     * 
+     * }
+     * 
+     * }
+     * 
+     * }
+     */
+
+    /*
+     * void domestictransportation() {
+     * 
+     * // system("cls");
+     * 
+     * // loading();
+     * 
+     * // logo();
+     * 
+     * int selectvehicletype;
+     * 
+     * System.out.println(
+     * "\t\t\t\t\t\t==========================================================");
+     * System.out.
+     * println("\t\t\t\t\t\t|                  Welcome To EL-DORADO                  |"
+     * );
+     * System.out.
+     * println("\t\t\t\t\t\t|                    Domestic Travel                     |"
+     * );
+     * System.out.println(
+     * "\t\t\t\t\t\t==========================================================");
+     * System.out.println(
+     * "\t\t\t\t\t\t======================================================");
+     * System.out.
+     * println("\t\t\t\t\t\t|          Please Select The Vehicle Type            |"
+     * );
+     * System.out.println(
+     * "\t\t\t\t\t\t******************************************************");
+     * System.out.
+     * println("\t\t\t\t\t\t|               1. Bus                               |"
+     * );
+     * System.out.
+     * println("\t\t\t\t\t\t|               2. Train                             |"
+     * );
+     * System.out.
+     * println("\t\t\t\t\t\t|               3. Aeroplane                         |"
+     * );
+     * System.out.
+     * println("\t\t\t\t\t\t|               4. Return To Homepage                |"
+     * );
+     * System.out.println(
+     * "\t\t\t\t\t\t******************************************************");
+     * 
+     * Scanner scan = new Scanner(System.in);
+     * System.out.print("\t\t\t\t\t\t\t Enter Your choice: ");
+     * selectvehicletype = scan.nextInt();
+     * 
+     * switch (selectvehicletype) {
+     * 
+     * case 1: {
+     * 
+     * Transportation bus = new Transportation();
+     * bus.domesticbus();
+     * 
+     * }
+     * 
+     * case 2: {
+     * 
+     * Transportation train = new Transportation();
+     * train.domestictrain();
+     * 
+     * }
+     * 
+     * case 3:
+     * 
+     * {
+     * 
+     * Transportation plane = new Transportation();
+     * plane.domesticplane();
+     * 
+     * }
+     * 
+     * case 4: {
+     * 
+     * // return to homepage
+     * 
+     * }
+     * 
+     * }
+     * 
+     * }
+     */
+
+    // domestic bus ticket booking
+    void domesticbus() {
+        System.out.print("\t\t\t\t\t\t Enter Start Point:");
+        System.out.print("\t\t\t\t\t\t Enter Destination:");
+
+        // system("cls");
+
+        // loading();
+
+        // logo();
+
+        /*
+         * int choice, n = 1;
+         * 
+         * System.out.println(
+         * "\t\t\t\t\t\t======================================================");
+         * System.out.
+         * println("\t\t\t\t\t\t|          ** BUS RESERVATION AND TICKETING SYSTEM   **"
+         * );
+         * System.out.println(
+         * "\t\t\t\t\t\t******************************************************");
+         * System.out.
+         * println("\t\t\t\t\t\t|               1. Profile Creation                  |"
+         * );
+         * System.out.
+         * println("\t\t\t\t\t\t|               2. Destination                       |"
+         * );
+         * System.out.
+         * println("\t\t\t\t\t\t|               3. Payment                           |"
+         * );
+         * System.out.
+         * println("\t\t\t\t\t\t|               4. View Profile                      |"
+         * );
+         * System.out.
+         * println("\t\t\t\t\t\t|               5. Exit                              |"
+         * );
+         * System.out.println(
+         * "\t\t\t\t\t\t******************************************************");
+         * 
+         * Scanner scan = new Scanner(System.in);
+         * System.out.println("Enter Your Choice: ");
+         * choice = scan.nextInt();
+         * 
+         * switch (choice) {
+         * 
+         * case 1: {
+         * 
+         * Transportation transportation = new Transportation();
+         * transportation.buspassengerprofile();
+         * n++;
+         * 
+         * }
+         * 
+         * case 2: {
+         * 
+         * if (n < choice)
+         * break;
+         * 
+         * Transportation des = new Transportation();
+         * des.busdestination();
+         * n++;
+         * 
+         * }
+         * 
+         * case 3: {
+         * 
+         * if (n < choice)
+         * break;
+         * Transportation pur = new Transportation();
+         * pur.buspurchase();
+         * n++;
+         * 
+         * }
+         * 
+         * case 4: {
+         * 
+         * if (n < choice)
+         * break;
+         * 
+         * Transportation viw = new Transportation();
+         * 
+         * // viw.busview();
+         * 
+         * n++;
+         * 
+         * }
+         * 
+         * case 5: {
+         * 
+         * Transportation ex = new Transportation();
+         * 
+         * // ex.busexit()
+         * 
+         * }
+         * 
+         * }
+         * }
+         */
+
+    }   
 }
