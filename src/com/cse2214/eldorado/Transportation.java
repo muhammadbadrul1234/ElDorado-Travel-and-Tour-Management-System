@@ -1,6 +1,8 @@
 package com.cse2214.eldorado;
 
 //Takrim
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Transportation {
@@ -63,6 +65,8 @@ public class Transportation {
         System.out.println("\n\t\t\t\t\t\t\t=======================================");
 
         Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> array = new ArrayList<Integer>();
+
         System.out.println("Enter Your Choice: ");
 
         choice = scan.nextInt();
@@ -75,6 +79,14 @@ public class Transportation {
 
                 System.out.print("How many Tickets do you want to buy: ");
                 Bticketquantitiy = scan.nextInt();
+                
+                while(Bticketquantitiy!=0)
+                {
+                   array.add(Bticketquantitiy);
+                   Bticketquantitiy = scan.nextInt();
+                        
+                }
+
 
                 System.out.print("The Seat number you want to choose: ");
                 Bseatnumber = scan.nextInt();
@@ -1400,6 +1412,7 @@ public class Transportation {
         System.out.println("\n\t\t\t\t\t\t\t=======================================");
 
         Scanner scan = new Scanner(System.in);
+        ArrayList<
         System.out.println("Enter Your Choice: ");
 
         choice = scan.nextInt();
@@ -1413,8 +1426,16 @@ public class Transportation {
                 System.out.print("How many Tickets do you want to buy: ");
                 Bticketquantitiy = scan.nextInt();
 
-                System.out.print("The Seat number you want to choose: ");
-                Bseatnumber = scan.nextInt();
+                while(Bticketquantitiy!=0)
+                {
+
+           
+
+                }
+                
+                
+                //System.out.print("The Seat number you want to choose: ");
+                //Bseatnumber = scan.nextInt();
 
                 // Btotalprice=(Bclassticketprice*Bticketquantitiy) database
                 // database read;
@@ -1423,7 +1444,7 @@ public class Transportation {
                         "\n\t\t\t\t_________________________________________________________________________________________");
                 // System.out.println("\n\t\t\t\t The amount You need to pay is:
                 // "+Btotalprice+"TK");
-                System.out.println(
+                System. out.println(
                         "\n\t\t\t\t_________________________________________________________________________________________");
                 System.out.println(
                         "\n\t\t\t\t|                             Order Taken Successfully                                  |");
