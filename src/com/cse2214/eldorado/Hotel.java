@@ -4,78 +4,7 @@ import java.util.Scanner;
 
 public class Hotel{
                   
-        void eldoradoHotelRentSystem()
-        {
-
-            //system("cls");
-
-            // loading();
-
-            // logo();
-
-            System.out.println("\t\t\t\t\t\t==========================================================");
-            System.out.println("\t\t\t\t\t\t|                  Welcome To EL-DORADO                  |");
-            System.out.println("\t\t\t\t\t\t|                  Hotel Rental Service                 |");
-            System.out.println("\t\t\t\t\t\t==========================================================");
-            System.out.println("\t\t\t\t\t\t======================================================");
-            System.out.println("\t\t\t\t\t\t|           Please Select Your Travel Type            |");
-            System.out.println("\t\t\t\t\t\t******************************************************");
-            System.out.println("\t\t\t\t\t\t|               1. Domestic Travel                   |");
-            System.out.println("\t\t\t\t\t\t|               2. International Travel              |");
-            System.out.println("\t\t\t\t\t\t|               3. Return To Homepage                |");
-            System.out.println("\t\t\t\t\t\t******************************************************");
-                 
-
-            int traveltype;
-            Scanner scan = new Scanner(System.in);
-            traveltype = scan.nextInt();
-        
-            switch(traveltype)
-            {
-
-              case 1:
-              {
-
-                   Hotel hotel= new Hotel();
-                   hotel.domesticHotelRental();
-
-              }
-
-
-                case 2:
-                 {
-                
-
-
-                     
-                    //International Travel
-                   Hotel hotel= new Hotel();
-                   hotel.internationalHotelRental();
-
-
-
-                 }
-
-
-
-                 case 3:
-
-                    {
-
-
-
-
-                         //Retrun to homepage
-
-
-
-                     }
-            
-            }
-
-
-        }
-
+      
         void domesticHotelRental()
             {
                  
@@ -83,7 +12,7 @@ public class Hotel{
                  int choice,n=1;
 
                  System.out.println("\t\t\t\t\t\t======================================================");
-                 System.out.println("\t\t\t\t\t\t|          ** HOTEL RENTAL AND ROOM BOOKING SYSTEM   **");            
+                 System.out.println("\t\t\t\t\t\t|         ** HOTEL RENTAL AND ROOM BOOKING SYSTEM   **");            
                  System.out.println("\t\t\t\t\t\t******************************************************");
                  System.out.println("\t\t\t\t\t\t|               1. Profile Creation                  |");
                  System.out.println("\t\t\t\t\t\t|               2. Destination                       |");
@@ -780,7 +709,7 @@ public class Hotel{
                     System.out.println("\n\t\t\t\t_________________________________________________________________________________________");
                    // System.out.println("\n\t\t\t\t                       The amount You need to pay is: "+stotalprice+"TK");
                     System.out.println("\n\t\t\t\t_________________________________________________________________________________________");
-                    System.out.println("\n\t\t\t\t|                             Order Taken Successfully                                  |");
+                    System.out.println("\n\t\t\t\t|                             Booking Taken Successfully                                  |");
                     System.out.println("\n\t\t\t\t|                        Go to Reciept Menu and Pay The Bill                            |");                         
                     System.out.println("\n\t\t\t\t|_______________________________________________________________________________________|"); 
 
@@ -804,7 +733,7 @@ public class Hotel{
                     System.out.println("\n\t\t\t\t_________________________________________________________________________________________");
                    // System.out.println("\n\t\t\t\t                       The amount You need to pay is: "+ntotalprice+"TK");
                     System.out.println("\n\t\t\t\t_________________________________________________________________________________________");
-                    System.out.println("\n\t\t\t\t|                             Order Taken Successfully                                  |");
+                    System.out.println("\n\t\t\t\t|                            Booking Taken Successfully                                  |");
                     System.out.println("\n\t\t\t\t|                        Go to Reciept Menu and Pay The Bill                            |");                         
                     System.out.println("\n\t\t\t\t|_______________________________________________________________________________________|"); 
 
@@ -867,7 +796,7 @@ public class Hotel{
                     //loading();
                     //loading();
      
-                    System.out.println("\n\t\t\t\t\t\t\tTransaction Successfull!");
+                    System.out.println("\n\t\t\t\t\t\t\tTransaction Successfull! You are CHecked in!");
      
                     System.out.println("\n\t\t\t\t\t\t\tPress Enter To Return");
      
@@ -908,7 +837,7 @@ public class Hotel{
                     //loading();
                     //loading();
      
-                    System.out.println("\n\t\t\t\t\t\t\tTransaction Successfull!");
+                    System.out.println("\n\t\t\t\t\t\t\tTransaction Successfull! You are Checked in!");
      
                     System.out.println("\n\t\t\t\t\t\t\t Press Enter To Return");
      
@@ -949,7 +878,7 @@ public class Hotel{
                     //loading();
                     //loading();
      
-                    System.out.println("\n\t\t\t\t\t\t\t Transaction Successfull!");
+                    System.out.println("\n\t\t\t\t\t\t\t Transaction Successfull! You are chekced in!");
      
                     System.out.println("\n\t\t\t\t\t\t\t Press Enter To Return");
      
