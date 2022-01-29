@@ -7,6 +7,7 @@ import org.bson.Document;
 import java.util.Formatter;
 import java.util.logging.Logger;
 import java.util.logging.Level;
+import java.util.ArrayList;
 
 public class MongoDB {
     MongoClient client;
@@ -15,7 +16,8 @@ public class MongoDB {
     MongoCollection<Document> collectionbus;
     MongoCollection<Document> collectionedb;
     MongoCollection<Document> collectionadmin;
-    FindIterable<Document> iterdoc, iterdocbus, iterdocedb,iterdocadmin;
+    MongoCollection<Document> collectiontrain;
+    FindIterable<Document> iterdoc, iterdocbus, iterdocedb,iterdocadmin,iterdoctrain;
     public MongoDB() {
         Logger.getLogger("org.mongodb.driver").setLevel(Level.OFF);
         client = MongoClients.create("mongodb+srv://ElDorado1:MAcmw0ldFbNTvLdU@eldorado1.wuakt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
@@ -24,10 +26,13 @@ public class MongoDB {
         collectionbus = db.getCollection("BUSDB");
         collectionedb = db.getCollection("EmergencyContactDatabase");
         collectionadmin = db.getCollection("Admin");
+        collectiontrain = db.getCollection("TrainDB");
         iterdoc = collection.find(); // is a list of iterable document
         iterdocbus = collectionbus.find();
         iterdocedb = collectionedb.find();
         iterdocadmin = collectionadmin.find();
+        iterdoctrain = collectiontrain.find();
+
     }
     void mongoDB() {
         for (Document doc : iterdoc){
@@ -39,17 +44,35 @@ public class MongoDB {
         for (Document doc : iterdocbus)
             System.out.println(doc.get("From_City") + "\t|\t" + doc.get("Fare"));
     }
-    void mongoDBBusFinder(String From,String To) {
+    ArrayList<Integer>mongoDBBusFinder(String From,String To) {
         int sum=1;
+        int Bticketprice;
+        ArrayList<Integer> array = new ArrayList<Integer>();
         for(Document doc : iterdocbus){
             if (doc.get("To").equals(To)){
                 System.out.print("\n\t\t\t\t|");
-                System.out.format("%5s%10s%10s%20s%6s%4s%4s", sum+"\t|", From, "-"+doc.get("To") + "\t|", doc.get("Bus") + "\t|",doc.get("Time")+ "\t|" , doc.get("Fare") + "\t|\t",doc.get("Fare")+"\t|");
-                int Fare=1;//doc.get("Fare");
-                sum++;
-                new Transportation().fareGenerator(Fare);
+                Bticketprice = doc.getInteger("Fare");
+                array.add(Bticketprice);
+                System.out.format("%5s%10s%10s%20s%6s%4s%4s", sum+"\t|", From, "-"+doc.get("To") + "\t|", doc.get("Bus") + "\t|", doc.get("Time")+ "\t|" , doc.get("Fare") + "\t|\t",doc.get("TicketAvail")+"\t|");
+                sum++; 
             }
         }
+        return array;
+    }
+    ArrayList<Integer>mongoDBTrainFinder(String From,String To) {
+        int sum=1;
+        int Bticketprice;
+        ArrayList<Integer> array2 = new ArrayList<Integer>();
+        for(Document doc : iterdoctrain){
+            if (doc.get("To").equals(To)){
+                System.out.print("\n\t\t|");
+                Bticketprice = doc.getInteger("Fare");
+                array2.add(Bticketprice);
+                System.out.format("%5s%10s%10s%20s%20s%6s%4s%4s", sum+"\t|", From, "-"+doc.get("To") + "\t|", doc.get("Train") + "\t|\t",doc.get("Class")+"|",doc.get("Time")+ "|" , doc.get("Fare") + "\t|\t",doc.get("TicketAvail")+"\t|");
+                sum++; 
+            }
+        }
+        return array2;
     }
     void insertMongoDB(int User_Number, String... args) {
         Document doc = new Document("User Number", User_Number)

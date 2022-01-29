@@ -34,14 +34,14 @@ public class Application {
                 new UserInterface().exit();
                 break;
             case 7:// Feature implementation & testing Purpose
-                new Transportation().busdestination();
+                new Transportation().traindestination();
                 break;
             default:
                 frontPage();
                 break;
         }
     }
-
+//Sabiha Sultana__Start//
     void emergecyHelp() {
         System.out.print("\033[H\033[2J");
         int x;
@@ -130,6 +130,7 @@ public class Application {
         new UserInterface().promptEnterKey();
         emergecyHelp();
     }
+//Sabiha Sultana____End//
 
     void usersLogin() {
         int choice;
@@ -139,22 +140,18 @@ public class Application {
         choice = scan.nextInt();
         switch (choice) {
             case 1:{
-                new Transportation().domesticbus();
                 break;
             }
             case 2: {
                 Transportation domestictrain = new Transportation();
-                domestictrain.domestictrain();
                 break;
             }
             case 3: {
                 Transportation domesticplane = new Transportation();
-                domesticplane.domesticplane();
                 break;
             }
             case 4: {
                 Transportation internationalplane = new Transportation();
-                internationalplane.internationalplane();
                 break;
             }
             case 5: {
@@ -168,7 +165,6 @@ public class Application {
             }
             case 7: {
                 Transportation immigration = new Transportation();
-                immigration.immigrationhelp();
             }
             case 8:{
                 frontPage();
