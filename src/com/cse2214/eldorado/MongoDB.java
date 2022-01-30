@@ -188,6 +188,24 @@ public class MongoDB {
             return true;
         return false;
     }
+    public boolean passportAuth(String user) {
+        Document doc = collection.find(Filters.eq("Passport Number", user)).first();
+        if (doc.get("Passport Number").equals(user))
+            return true;
+        return false;
+    }
+    public boolean visaAuth(String user) {
+        Document doc = collection.find(Filters.eq("Visa ID", user)).first();
+        if (doc.get("Visa ID").equals(user))
+            return true;
+        return false;
+    }
+    public boolean covidAuth(String user) {
+        Document doc = collection.find(Filters.eq("Passport Number", user)).first();
+        if (doc.get("Passport Number").equals(user))
+            return true;
+        return false;
+    }
     
     void mongoDBEmergencyDB() {
         for (Document doc : iterdocedb) {

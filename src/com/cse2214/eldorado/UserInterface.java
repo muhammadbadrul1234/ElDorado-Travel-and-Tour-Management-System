@@ -107,21 +107,19 @@ public class UserInterface {
         void loading() {
                 System.out.println("\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\tLoading\n\n\t\t\t\t\t\t");
                 System.out.print("\t\t\t\t\t\t      ");
-                /*
-                 * char x = 16;
-                 * try {
-                 * for (int i = 0; i < 50; i++) {
-                 * System.out.print(ANSI_WHITE_BACKGROUND + ANSI_PURPLE + x + ANSI_RESET);
-                 * if (i < 10)
-                 * Thread.sleep(150);
-                 * if (i >= 10 && i < 20)
-                 * Thread.sleep(20);
-                 * if (i >= 10)
-                 * Thread.sleep(20);
-                 * }
-                 * } catch (Exception e) {
-                 * }
-                 */
+                 char x = 16;
+                 try {
+                 for (int i = 0; i < 50; i++) {
+                 System.out.print(ANSI_WHITE_BACKGROUND + ANSI_PURPLE + x + ANSI_RESET);
+                 if (i < 10)
+                 Thread.sleep(150);
+                 if (i >= 10 && i < 20)
+                 Thread.sleep(20);
+                 if (i >= 10)
+                 Thread.sleep(20);
+                 }
+                 } catch (Exception e) {
+                 }
         }
 
         void loadingBar() {
@@ -286,6 +284,49 @@ public class UserInterface {
                                 .println(ANSI_RED + "\t\t\t\t\t\t******************************************************"
                                                 + ANSI_RESET);
         }
+        void verificationSuccessfull() {
+                System.out.println(
+                                ANSI_GREEN + "\t\t\t\t\t\t======================================================"
+                                                + ANSI_RESET);
+                System.out.println(
+                                ANSI_GREEN + "\t\t\t\t\t\t|                Verification Successfull            |"
+                                                + ANSI_RESET);
+                System.out.println(
+                                ANSI_GREEN + "\t\t\t\t\t\t|           Press Enter to go to previous Menu       |"
+                                                + ANSI_RESET);
+                System.out.println(
+                                ANSI_GREEN + "\t\t\t\t\t\t******************************************************"
+                                                + ANSI_RESET);
+        }
+        void verificationUnSuccessfull() {
+                System.out
+                                .println(ANSI_RED + "\t\t\t\t\t\t======================================================"
+                                                + ANSI_RESET);
+                System.out
+                                .println(ANSI_RED + "\t\t\t\t\t\t|       Verification Successfull: Data Not Found     |"
+                                                + ANSI_RESET);
+                System.out
+                                .println(ANSI_RED + "\t\t\t\t\t\t|       Press enter to Return to Prtevious Menu      |"
+                                                + ANSI_RESET);
+                System.out
+                                .println(ANSI_RED + "\t\t\t\t\t\t******************************************************"
+                                                + ANSI_RESET);
+        }
+        void registrationSuccessfull() {
+                System.out.println(
+                                ANSI_GREEN + "\t\t\t\t\t\t======================================================"
+                                                + ANSI_RESET);
+                System.out.println(
+                                ANSI_GREEN + "\t\t\t\t\t\t|Verification Successfull:You'll be Notified via sms |"
+                                                + ANSI_RESET);
+                System.out.println(
+                                ANSI_GREEN + "\t\t\t\t\t\t|           Press Enter to go to previous Menu       |"
+                                                + ANSI_RESET);
+                System.out.println(
+                                ANSI_GREEN + "\t\t\t\t\t\t******************************************************"
+                                                + ANSI_RESET);
+        }
+
 
         void adminLoginSuccessfull() {
                 System.out.println(
